@@ -1,9 +1,7 @@
 name: Build, Push, Ssh, Pull, Down, Up
 
-on:
-  push:
-    branches:
-      - 'main'
+on: [push]
+
 
 jobs:
   build-and-push:
@@ -32,7 +30,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: minhvu2212/cicd2024:staging
+          tags: minhvu2212/cicd2024:staging2
 
 
   pull-and-up:
